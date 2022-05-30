@@ -1,0 +1,44 @@
+:root{
+    --primerc:#1B1B1B;
+    --secondc:#FEA014 ;
+    --thirdc:#C52D3E ;
+    --fonta: 'Josefin Sans', sans-serif;
+    --fontb: 'Lora', serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.video-resources-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+.video-resources-box .resource-eins{
+    width: 70%;
+}
+.resource-eins .vjs-control-bar{
+    color: #fff;
+    background-color: var(--primerc);
+}
+.resource-eins .vjs-play-progress,
+.resource-eins .vjs-volume-level{
+    background-color: var(--thirdc);
+}
+.resource-eins .vjs-slider{
+    background-color: var(--secondc);
+}
+.resource-eins .vjs-big-play-button{
+    background-color:var(--thirdc);
+    color: #FFF;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    border: none;
+}
+.resource-eins:hover .vjs-big-play-button{
+    background-color:var(--secondc);
+}

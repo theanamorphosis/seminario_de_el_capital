@@ -1,0 +1,219 @@
+:root{
+    --primerc:#1B1B1B;
+    --secondc:#FEA014 ;
+    --thirdc:#C52D3E ;
+    --fonta: 'Josefin Sans', sans-serif;
+    --fontb: 'Lora', serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--thirdc);
+    padding: 5px 0;
+}
+.escudo-box{
+    width: 100%;
+    margin: 40px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.escudo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #FEA014;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.escudo img{
+    width:100%;  
+}
+.title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--fontb);
+    color: #fff;
+    font-size: 23px;
+    font-weight:bold;
+}
+@media screen and (min-width:570px){
+    .title{
+        font-size: 27px;
+    }
+}
+.typed-2 i{
+    color: #fff;
+    font-family: var(--fontb);
+    font-style: normal;
+}
+/* Page */
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primerc);
+    color: black;
+}
+.page{
+    width: 80%;
+    background: #fff url("../img&vd/img/main/background.jpg")  scroll;
+    background-size: cover;
+    box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.75);
+    margin: 40px 0px;
+    margin-bottom: 100px;
+}
+@media screen and (max-width:372px) {
+    .page{
+        width:90%;
+    }
+}
+.titleX{
+    font-family: var(--fontb);
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0px 40px 0px;
+}
+.subtitleX{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+    font-family: var(--fonta);
+    font-weight: normal;
+}
+@media screen and (max-width:476px){
+    .titleX{
+        font-size: 22px;
+    }
+    .subtitleX
+    {
+        font-size: 15px;
+    }
+}
+/* Menu / Navigator */
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+}
+.menu a{
+    color: #fff;
+    font-family: var(--fonta);
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px 0px;
+    margin-bottom: 3px;
+}
+.menu a:hover{
+    border-bottom: 2px solid var(--secondc);
+}
+@media screen and (max-width:483px) {
+    .menu a{
+        padding: 3px;
+    }
+}
+.nav-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 40px;
+    background-color: var(--thirdc);
+    width: 40%;
+}
+@media screen and (max-width:1041) {
+    .nav-box{
+        width: 60%;
+    }
+}
+@media screen and (max-width:905) {
+    .nav-box{
+        width:70% ;
+    }
+}
+@media screen and (max-width:653px) {
+    .nav-box{
+        width:90% ;
+    }
+}
+.menu-botton-box{
+position: fixed;
+bottom: 0;
+left: 0;
+display: flex;
+justify-content: center;
+align-items:center ;
+width: 100%;
+z-index: 15;
+}
+.menu-botton{
+    background-color: var(--secondc);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    font-size: 25px;
+}
+/* Unshowed menu-window */
+.unshowed-menu{
+    opacity: 0;
+    transform: scale(0%);
+    pointer-events:none;
+    transition: opacity .5s;
+    transition: transform .5s;
+}
+.showed-menu{
+    opacity: 1;
+    transform: scale(100%);
+    pointer-events:all;
+    transition: opacity .5s;
+    transition: transform .5s;
+}
+/* icon menu */
+.icon-menu-botton-waiting{
+    transform: rotate(0deg);
+    transition: transform .5s;
+}
+.icon-menu-botton-working{
+    transform: rotate(-180deg);
+    transition: transform .5s;
+}
